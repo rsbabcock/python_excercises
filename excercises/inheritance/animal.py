@@ -1,11 +1,13 @@
 class Animal():
+    
   def __init__(self, species, leg_num=0, domesticated=False):
     self.species = species
     self.leg_num = leg_num
     self.domesticated = domesticated
 
-  def saySomething(self):
+  def say_something(self):
+    print(self.species )
     if self.species == "dog":
-      return "Woof"
+      return "woof"
     else:
       return "moosqueakrrrrrchirp"
