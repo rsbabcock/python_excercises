@@ -1,5 +1,4 @@
-from animal import Animal
-from dog import Dog
+
 class Pet():
 
     # animal_type = Dog("aussie")
