@@ -16,7 +16,7 @@ class PalindromeTest(unittest.TestCase):
 
     def test_is_palindrome(self):
         pal = Palindrome()
-        self.assertTrue(pal.is_palindrome(), )
+        self.assertTrue(pal.is_palindrome("Fred"))
   # Write test methods for subtract, multiply, and divide
 
 if __name__ == '__main__':
