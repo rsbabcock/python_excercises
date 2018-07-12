@@ -24,5 +24,26 @@ class TestAnimal(unittest.TestCase):
     self.bob.set_legs(6)
     self.assertEqual(self.bob.legs, 6)
 
+  def test_animal_can_walk(self):
+    self.bob.walk()
+    print(self.bob.speed)
+    self.assertEqual(self.bob.speed, 1.20)
+
+  def test_animal_get_name(self):
+    self.assertEqual(self.bob.get_name(), "Bob")   
+
+  def test_animal_can_set_species(self):
+    self.bob.set_species("Canine")  
+    self.assertEqual(self.bob.species, "Canine")
+
+  def test_animal_can_get_species(self):
+    self.bob.set_species("Canine")
+    self.assertEqual(self.bob.get_species(), "Canine")  
+
+  def test_animal_gets_back_string(self):
+    self.assertEqual(self.bob.__str__(), "Bob is a Canine")
+    # self.assertEqual(self.bob.__str__(), sel)
+
+
 if __name__ == '__main__':
       unittest.main()

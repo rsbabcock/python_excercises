@@ -12,7 +12,7 @@ class Animal:
     def walk(self):
         """Sets the speed of the animal"""
         if isinstance(self.legs, int) and self.legs > 0:
-            self.speed = self.speed + (0.1 * self.legs)
+            self.speed = self.speed + round(0.1 * self.legs, 2)
         else:
             raise ValueError('Legs property must contain a number greater than 0')
 
@@ -39,4 +39,4 @@ class Dog(Animal):
 
     def walk(self):
         """Sets the speed of the dog"""
-        self.speed = self.speed + (0.2 * self.legs)
+        self.speed = self.speed + round(0.2 * self.legs, 2)
