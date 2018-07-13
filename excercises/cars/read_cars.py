@@ -14,7 +14,11 @@ class Car():
 
     def read_car_models(self):
         with open("car_models.txt", "r") as models_of_cars:
-            return list(models_of_cars)
+            pretty_models = list()
+            for model in models_of_cars:
+                pretty_model = model[:len(model)-1]
+                pretty_models.append(pretty_model)
+            return list(pretty_models)  
 
     def get_dict_of_makes_and_models(self):
         # use above methods
@@ -22,13 +26,25 @@ class Car():
         models = self.read_car_models()
         # iterate through return values
         # make dict out of values
+        # newer_dict = new_dict.fromkeys(makes)
+        # return print(newer_dict)
+
+        # check if first letter of makes = first letter of model
+        # if so add to newer dict
+        # final_dict = {newer_dict[list()].append(l) for l in models if l[:1] == newer_dict.keys()}
         new_dict = dict()
-        newer_dict = new_dict.fromkeys(makes)
-        return print(new_dict.fromkeys(makes))
-            # for make in makes:
-            #     if make[0] in models:
-                # key = make
-                # value = models
+        print(new_dict)
+        for model in models:
+            for make in makes:
+                if model[:1] == make[:1]:
+                    if make in new_dict:
+                    # if make[:1] in new_dict:
+                        new_dict[make].append(model[2:])                    
+                    else:
+                       new_dict[make] = [model[2:]]
+
+        return(print(new_dict))
+
 car = Car()           
 car.get_dict_of_makes_and_models()        
 

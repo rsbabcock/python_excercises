@@ -1,3 +1,6 @@
 T=Prius
 N=Frontier
 H=Fit
+T=Tacoma
+N=Leaf
+H=Civic
